@@ -1,0 +1,99 @@
+@charset "UTF-8";
+[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  opacity: 0.01;
+}
+
+[type="checkbox"] + label {
+  position: relative;
+  padding-left: 2.6em;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  cursor: pointer;
+  font-weight: lighter;
+  font-family: Montserrat;
+}
+
+label::after {
+  font-size: 4rem;
+}
+
+/* Aspect de la case */
+[type="checkbox"]:not(:checked) + label::before,
+[type="checkbox"]:checked + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.2em;
+  height: 1.2em;
+  border: 1px solid #aaa;
+  background: #fff;
+  border-radius: 0.2em;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 rgba(203, 34, 237, 0.2);
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 rgba(203, 34, 237, 0.2);
+  -webkit-transition: all 0.275s;
+  transition: all 0.275s;
+}
+
+/* Aspect de la coche */
+[type="checkbox"]:not(:checked) + label::after,
+[type="checkbox"]:checked + label::after {
+  content: "✕";
+  speak: never;
+  /* Pour être sûr que le lecteur d'écran ne lira pas "fois" */
+  position: absolute;
+  top: 0.48em;
+  left: 0.18em;
+  font-size: 1.2em;
+  color: #f2994a;
+  line-height: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  /* Petite transition */
+}
+
+/* Aspect non cochée */
+[type="checkbox"]:not(:checked) + label::after {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(45deg);
+          transform: scale(0) rotate(45deg);
+}
+
+/* Aspect cochée */
+[type="checkbox"]:checked + label::after {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0);
+          transform: scale(1) rotate(0);
+}
+
+.ingredient__title__sub__list {
+  margin-bottom: 1rem;
+}
+
+.ingredient__title {
+  font-size: 2rem;
+}
+
+.ingredient__title__sub {
+  font-style: italic;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 800px) {
+  .label {
+    height: 2rem;
+  }
+  [type="checkbox"] + label {
+    width: 10rem;
+    position: relative;
+    padding-left: 2.4em;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    cursor: pointer;
+    font-weight: lighter;
+    font-family: Montserrat;
+  }
+}
+/*# sourceMappingURL=ingredients.css.map */

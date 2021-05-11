@@ -1,0 +1,58 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 4rem 20rem;
+  margin: auto;
+  font-family: sans-serif;
+  background-color: #ffff;
+}
+
+.main {
+  padding-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ingredients-instructions {
+  width: 60%;
+  padding: 0rem 10rem 2rem 0rem;
+}
+
+.source {
+  color: #bdbdbd;
+  font-style: italic;
+}
+
+footer {
+  margin: 6rem auto 0;
+  width: 20rem;
+  color: #828282;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding: 2em 0.5em;
+    margin: auto;
+    font-family: sans-serif;
+    background-color: #ffff;
+  }
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .ingredients-instructions {
+    width: 100%;
+    padding: 0rem;
+  }
+}
+/*# sourceMappingURL=base.css.map */

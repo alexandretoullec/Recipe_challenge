@@ -1,0 +1,41 @@
+.instructions {
+  font-size: 1.2rem;
+}
+
+.instructions__title {
+  font-size: 2rem;
+}
+
+.instructions__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.instructions__items__num {
+  margin: 0rem 0rem;
+  border-radius: 30%;
+  width: 36px;
+  height: 36px;
+  background: #dd8e27;
+  color: #fcefef;
+  text-align: center;
+}
+
+.instructions__items__text {
+  width: 90%;
+  margin: 0rem 1rem 2rem 1rem;
+  font-size: 1.2rem;
+  font-family: Montserrat;
+  line-height: 1.8rem;
+}
+
+@media screen and (max-width: 800px) {
+  .instructions__items {
+    width: 30rem;
+  }
+}
+/*# sourceMappingURL=instructions.css.map */
